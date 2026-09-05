@@ -17,7 +17,7 @@ This replaces the previous Wix site with a Next.js App Router app. Business fact
 | `/` | Hero, trust strip, services, builds, about, testimonials, merch |
 | `/services` | Full service menu + platforms |
 | `/builds` | Gallery with captions |
-| `/book` | Square booking + deposit explainer + inquiry form |
+| `/book` | Square booking + on-site inquiry form |
 | `/contact` | Address, phone, email, hours, Instagram, map, form |
 | `/shop` | GTR and G80 shirts ($25) |
 | `/about` | Wali’s story, credentials, testimonials |
@@ -41,7 +41,6 @@ npm start
 ## Booking & contact (already wired)
 
 - **Square booking:** https://builtbywali.square.site/
-- **Deposit:** $105 ($100 applied to invoice + $5 processing), non-refundable, 48-hour reschedule
 - **Shop:** 25450 S Cass St, Canby, Oregon 97013
 - **Phone:** (971) 770-8044
 - **Email:** tunedbywali@gmail.com
@@ -55,7 +54,7 @@ The inquiry API validates the payload and logs it. To email the shop on submit, 
 
 Edit [`site.config.ts`](./site.config.ts) for hours, services, merch, testimonials, gallery images, and copy. Components read from that file.
 
-Gallery images currently use Unsplash automotive photography as cinematic stand-ins. Swap `image` URLs for real shop photos when you have them.
+Hero, about, and the builds gallery use real shop photos from the live Wix Builds gallery, stored in `public/builds/`. The header/footer mark is the original brush-script logo in `public/tunedbywali-logo.jpg`. Swap files there and update `site.config.ts` when new photos land.
 
 ## Deploy
 

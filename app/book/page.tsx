@@ -8,7 +8,7 @@ import { site } from "@/site.config";
 export const metadata: Metadata = {
   title: "Book",
   description:
-    "Book TunedByWali on Square with a $105 deposit, or send an on-site inquiry for estimates and questions.",
+    "Book TunedByWali on Square, or send an on-site inquiry for estimates and questions.",
 };
 
 export default function BookPage() {
@@ -17,7 +17,7 @@ export default function BookPage() {
       <PageHero
         kicker="Book"
         title="Lock the bay — or start with a conversation."
-        description="Primary booking lives on Square. Use the form if you need an estimate, a merch size, or a question answered before you put down the deposit."
+        description="Primary booking lives on Square. Use the form if you need an estimate, a merch size, or a question answered first."
       />
       <section className="bg-ink">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 sm:px-6 lg:grid-cols-2">
@@ -26,25 +26,15 @@ export default function BookPage() {
               Square booking
             </p>
             <h2 className="font-display mt-3 text-4xl tracking-tight text-snow uppercase">
-              $105 holds the slot.
+              Continue booking on Square.
             </h2>
-            <ul className="mt-6 space-y-4 text-sm leading-relaxed text-mute">
-              <li>
-                <span className="text-snow">$100</span> is applied to your
-                invoice.
-              </li>
-              <li>
-                <span className="text-snow">$5</span> covers processing.
-              </li>
-              <li>
-                Deposit is <span className="text-snow">non-refundable</span>.
-              </li>
-              <li>
-                Reschedule with at least{" "}
-                <span className="text-snow">48 hours</span> notice.
-              </li>
-            </ul>
-            <p className="mt-6 text-sm text-mute">{site.booking.note}</p>
+            <p className="mt-6 text-sm leading-relaxed text-mute">
+              {site.booking.note}
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-mute">
+              Square shows current scheduling details. We reply to inquiries
+              during shop hours.
+            </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href={site.booking.url} external>
                 Book on Square

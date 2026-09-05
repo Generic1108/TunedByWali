@@ -60,8 +60,8 @@ export function InquiryForm() {
           We will get back during shop hours.
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-mute">
-          For the fastest confirmed slot, book on Square with the $105 deposit.
-          $100 applies to the invoice. Reschedule with 48 hours notice.
+          For the fastest confirmed slot, continue booking on Square.
+          Please give at least 48 hours if you need to reschedule.
         </p>
         <a
           href={site.booking.url}
@@ -91,8 +91,7 @@ export function InquiryForm() {
         Tell us about the car.
       </h3>
       <p className="mt-3 text-sm text-mute">
-        Estimates, questions, merch sizes, or a note before you put down the
-        Square deposit.
+        Estimates, questions, merch sizes, or a note before you book on Square.
       </p>
       <div className="sr-only" aria-hidden>
         <label>

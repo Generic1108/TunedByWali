@@ -19,7 +19,7 @@ export function BuildsGallery({
           <SectionHeading
             kicker="Builds"
             title="Cars that taught the shop how to work."
-            description="From the 2002 WRX that started it to GT-R, Evo, and G80 work on the AWD dyno. Hardware, calibration, and the extra step in between."
+            description="Real cars from the Canby floor — GT-R, Evo, STI, BMW, Type R, and the rest. Hardware, calibration, and the extra step in between."
           />
           {limit ? (
             <Link

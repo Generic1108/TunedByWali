@@ -15,7 +15,7 @@ export default function BuildsPage() {
       <PageHero
         kicker="Builds"
         title="Every car on this floor taught the shop something."
-        description="The high-school WRX. Godzilla. Evos that stay healthy. Euro cars that still drive like daily drivers. We show the work — and the caption is the point."
+        description="These are cars that have been tuned, modified, or serviced here — shop-floor photos, not stock stand-ins. Want yours on the wall? Email a photo of the ride."
       />
       <BuildsGallery heading={false} />
       <CtaBanner />

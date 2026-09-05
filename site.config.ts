@@ -34,9 +34,6 @@ export type MerchItem = {
   accent: string;
 };
 
-const unsplash = (id: string, w = 1800) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
-
 export const site = {
   name: "TunedByWali",
   shortName: "TBW",
@@ -78,11 +75,8 @@ export const site = {
   ],
   booking: {
     url: "https://builtbywali.square.site/",
-    deposit: 105,
-    applied: 100,
-    processing: 5,
     rescheduleHours: 48,
-    note: "A $105 booking deposit holds your slot. $100 is applied to your invoice; $5 covers processing. Deposits are non-refundable. Reschedule with at least 48 hours notice.",
+    note: "Reserve a slot on Square, or send an inquiry if you want to talk through the car first. Please give at least 48 hours if you need to reschedule.",
   },
   nav: [
     { href: "/", label: "Home" },
@@ -105,6 +99,7 @@ export const site = {
     "Nissan",
     "Honda",
     "Toyota",
+    "Lexus",
     "BMW",
     "Euro",
     "Domestic",
@@ -218,76 +213,164 @@ export const site = {
   ] satisfies Service[],
   builds: [
     {
-      id: "wrx-origin",
-      title: "2002 Subaru WRX",
+      id: "shop-floor",
+      title: "The Canby shop",
       caption:
-        "The car that started it. Wali bought it in high school, built every part himself, and learned to tune because nobody else would.",
-      platform: "Subaru",
-      image: unsplash("photo-1626668893632-6f3a4466d22f"),
-      imageAlt: "Blue Subaru WRX STI parked in dramatic light",
+        "GT-R on the lift, Evo in the center, STI on the wall, BMW strapped to the AWD dyno. This is the actual floor — Euro, JDM, and domestic in the same bay.",
+      platform: "Shop",
+      image: "/builds/shop-floor.jpeg",
+      imageAlt:
+        "TunedByWali shop floor with a Nissan GT-R on a lift, Mitsubishi Evo, Subaru STI, and BMW on the dyno",
     },
     {
-      id: "gtr",
-      title: "Nissan GT-R",
+      id: "evo-mivec",
+      title: "MIVEC turbo — signed",
       caption:
-        "Godzilla on the AWD dyno. Calibration that respects the transaxle, the tires, and the way a GTR actually puts power down.",
-      platform: "Nissan",
-      image: unsplash("photo-1544636331-e26879cd4d9b"),
-      imageAlt: "Nissan GT-R front three-quarter in low light",
-    },
-    {
-      id: "evo-x",
-      title: "Mitsubishi Evo X",
-      caption:
-        "Full-bolt-on, stock-turbo street cars done right — the kind of Evo work customers still talk about years later.",
+        "Red valve cover, AMS manifold, Spark Tech ignition, Koyorad — and the TunedByWali script on the cam cover. The extra step, in metal.",
       platform: "Mitsubishi",
-      image: unsplash("photo-1542362567-b07e54358753"),
-      imageAlt: "Red performance car in dramatic lighting",
+      image: "/builds/evo-mivec-engine.jpeg",
+      imageAlt:
+        "Top-down view of a MIVEC turbo engine bay with a red TunedByWali valve cover",
     },
     {
-      id: "g80",
-      title: "BMW G80",
+      id: "wrx-sti-dyno",
+      title: "Hawkeye STI on the rollers",
       caption:
-        "Euro performance with shop-spec manners. Unlock, calibrate, and keep the daily usable.",
+        "Perrin cooling plate, open hood, orange fan in the face. The wall behind it says TunedByWali for a reason.",
+      platform: "Subaru",
+      image: "/builds/wrx-sti-dyno-branded.jpeg",
+      imageAlt:
+        "Silver Subaru WRX STI on the chassis dyno under a TunedByWali shop wall",
+    },
+    {
+      id: "evo-red",
+      title: "Red Evo, open bay",
+      caption:
+        "R888Rs, Brembos, dump tube in the air. JDM work that still looks like a shop car, not a magazine cover.",
+      platform: "Mitsubishi",
+      image: "/builds/evo-red-bay.jpeg",
+      imageAlt:
+        "Bright red Mitsubishi Lancer Evolution parked in the TunedByWali shop with the hood open",
+    },
+    {
+      id: "wrx-red-engine",
+      title: "Hawkeye WRX engine bay",
+      caption:
+        "Red manifold, GrimmSpeed shroud, Perrin stay, front-mount piping. Subaru Master Technician work you can read from the cowl.",
+      platform: "Subaru",
+      image: "/builds/wrx-red-engine.jpg",
+      imageAlt:
+        "Red Subaru WRX with the hood open showing a built engine bay in the shop",
+    },
+    {
+      id: "bmw-m3",
+      title: "F80 M3 widebody",
+      caption:
+        "Rivet flares, carbon splitter, turbo hardware in the bay — then strapped to the dyno until the file and the street agree.",
       platform: "BMW",
-      image: unsplash("photo-1618843479313-40f8afb4b4d8"),
-      imageAlt: "BMW performance sedan front three-quarter",
+      image: "/builds/bmw-m3-widebody.jpeg",
+      imageAlt:
+        "Light blue BMW M3 widebody on the dyno with the hood open",
     },
     {
-      id: "engine-build",
-      title: "Engine builds",
+      id: "civic-type-r",
+      title: "FK8 Type R — Dynocom",
       caption:
-        "Assembled by a Subaru Master Technician who spent years building engines by day and his own cars after hours.",
-      platform: "In-house",
-      image: unsplash("photo-1486262715619-67b85e0b08d3"),
-      imageAlt: "Close-up of a performance engine bay",
+        "Carbon hood, dump pipes through the vent, headlights on. Honda calibration on the same rollers as the Subarus and Evos.",
+      platform: "Honda",
+      image: "/builds/civic-type-r-dyno.jpeg",
+      imageAlt:
+        "Sonic gray Honda Civic Type R on a Dynocom chassis dynamometer",
     },
     {
-      id: "dyno-floor",
-      title: "AWD dyno floor",
+      id: "evo-x-turbo",
+      title: "Evo X, big turbo",
       caption:
-        "Baseline, pull, confirm. We do not call a file finished until the numbers and the street manners agree.",
-      platform: "Shop",
-      image: unsplash("photo-1487754180451-c456f719a1fc"),
-      imageAlt: "Automotive workshop with a performance car on the floor",
+        "Sheepey Race cooler, hood-exit pipes, bumper off. The kind of Evo that customers still talk about years later.",
+      platform: "Mitsubishi",
+      image: "/builds/evo-x-turbo.jpeg",
+      imageAlt:
+        "Grey Mitsubishi Evo X in the shop with a large turbo and front-mount intercooler exposed",
     },
     {
-      id: "suspension-work",
-      title: "Chassis & suspension",
+      id: "lexus-sc",
+      title: "Lexus SC on the dyno",
       caption:
-        "Coilovers, geometry, and alignment so the tune has a chassis that can use it.",
-      platform: "All platforms",
-      image: unsplash("photo-1619642751034-765dfdf7c58e"),
-      imageAlt: "Technician working on a vehicle in a professional shop",
+        "Yellow SC, laptop on the box, TunedByWali card on the dash. Old-school chassis, modern calibration.",
+      platform: "Lexus",
+      image: "/builds/lexus-sc-dyno.jpeg",
+      imageAlt:
+        "Yellow Lexus SC on the chassis dyno with a TunedByWali sign on the dashboard",
     },
     {
-      id: "wheels",
-      title: "Wheels, tires, alignment",
+      id: "toyota-86",
+      title: "Toyota 86",
       caption:
-        "Fitment and rubber that match the goal — then a real alignment, not a printout and a shrug.",
-      platform: "Shop",
-      image: unsplash("photo-1558618666-fcd25c85cd64"),
-      imageAlt: "Close-up of a performance wheel and tire",
+        "HKS lip, red manifold, polished bar. Forced-induction 86 work that stays clean enough to leave the hood up.",
+      platform: "Toyota",
+      image: "/builds/toyota-86.jpeg",
+      imageAlt:
+        "Pearl white Toyota 86 in the shop with a red intake manifold visible",
+    },
+    {
+      id: "charger",
+      title: "Hellcat-widebody Charger",
+      caption:
+        "Domestic horsepower, FIC fueling, fender covers on the paint. Euro and JDM are the reputation — this is the rest of the menu.",
+      platform: "Domestic",
+      image: "/builds/charger-hellcat.jpeg",
+      imageAlt:
+        "Red Dodge Charger Hellcat Widebody in the shop with the hood open",
+    },
+    {
+      id: "bmw-dyno",
+      title: "BMW on the AWD dyno",
+      caption:
+        "Straps, rollers, aftermarket intake in the bay. Baseline, pull, confirm — then we drive it.",
+      platform: "BMW",
+      image: "/builds/bmw-dyno.jpeg",
+      imageAlt:
+        "Dark BMW M car strapped to the chassis dynamometer with the hood open",
+    },
+    {
+      id: "wrx-white-dyno",
+      title: "White STI, red COBB",
+      caption:
+        "STI badge, bronze wheels, red intake on the Dynocom. Subaru files built by someone who used to assemble these engines for a living.",
+      platform: "Subaru",
+      image: "/builds/wrx-sti-white-dyno.jpeg",
+      imageAlt:
+        "White Subaru WRX STI on the chassis dyno with a red COBB intake",
+    },
+    {
+      id: "audi-r8",
+      title: "R8 and Evo, same light",
+      caption:
+        "Gold R8 in the foreground, grey Evo X behind the lift. The shop is not a one-platform room.",
+      platform: "Euro + JDM",
+      image: "/builds/audi-r8-shop.jpeg",
+      imageAlt:
+        "Gold chrome Audi R8 and a grey Mitsubishi Evo inside the TunedByWali shop",
+    },
+    {
+      id: "bronco",
+      title: "Classic Bronco",
+      caption:
+        "Lifted, open-top, engine out in the sun. Builds here are not only JDM — if it is a car and it has a goal, it belongs on the list.",
+      platform: "Domestic",
+      image: "/builds/ford-bronco.jpeg",
+      imageAlt:
+        "Bright blue first-generation Ford Bronco with the hood off outside the shop",
+    },
+    {
+      id: "bmw-bay",
+      title: "Grey BMW at the door",
+      caption:
+        "Blacked-out kidney, performance wheels, bay door behind it. Daily Euro cars get the same extra step as the dyno heroes.",
+      platform: "BMW",
+      image: "/builds/bmw-grey-bay.jpeg",
+      imageAlt:
+        "Light grey BMW sedan parked in front of the TunedByWali shop doors",
     },
   ] satisfies Build[],
   testimonials: [
@@ -340,14 +423,16 @@ export const site = {
     ],
   },
   images: {
-    hero: unsplash("photo-1492144534655-ae79c964c9d7", 2400),
-    heroAlt: "Cinematic sports car in a dark performance setting",
-    about: unsplash("photo-1619642751034-765dfdf7c58e", 1600),
-    aboutAlt: "Technician working in a professional automotive shop",
-    shop: unsplash("photo-1487754180451-c456f719a1fc", 1600),
-    shopAlt: "Performance car in a working automotive shop",
-    book: unsplash("photo-1486262715619-67b85e0b08d3", 1600),
-    bookAlt: "Performance engine bay ready for calibration",
+    hero: "/builds/shop-floor.jpeg",
+    heroAlt:
+      "TunedByWali shop floor in Canby with a GT-R on the lift, Evo, STI, and BMW on the AWD dyno",
+    about: "/builds/wrx-sti-dyno-branded.jpeg",
+    aboutAlt:
+      "Silver Subaru WRX STI on the dyno under the TunedByWali shop wall",
+    shop: "/builds/audi-r8-shop.jpeg",
+    shopAlt: "Performance cars inside the TunedByWali shop",
+    book: "/builds/evo-mivec-engine.jpeg",
+    bookAlt: "MIVEC turbo engine bay with TunedByWali branding on the valve cover",
   },
 } as const;
 

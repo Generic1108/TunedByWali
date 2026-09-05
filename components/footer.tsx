@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-line bg-panel">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Logo />
+          <Logo size="footer" />
           <p className="mt-5 max-w-md text-sm leading-relaxed text-mute">
             {site.positioning} Built By Wali LLC. Tuning and builds since{" "}
             {site.foundedYear}. We take the extra step on every car.

@@ -25,7 +25,7 @@ export function MerchGrid({ heading = true }: { heading?: boolean }) {
           <li key={item.id}>
             <article className="flex h-full flex-col border border-line bg-card">
               <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-panel">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(225,6,0,0.28),transparent_45%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,0,0,0.28),transparent_45%)]" />
                 <div className="relative flex h-40 w-36 flex-col items-center justify-center rounded-sm border border-line bg-ink shadow-2xl">
                   <span className="font-display text-[0.65rem] tracking-[0.28em] text-mute">
                     TUNEDBYWALI
