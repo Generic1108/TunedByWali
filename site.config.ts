@@ -246,12 +246,12 @@ export const site = {
     },
     {
       id: "builds-15",
-      title: "McLaren — gold",
+      title: "McLaren in the shop",
       caption:
-        "Gold McLaren in the bay. The shop is not a one-platform room.",
+        "Chrome-gold McLaren in the Canby bay. The shop is not a one-platform room.",
       platform: "McLaren",
       image: "/builds/builds-15.jpg",
-      imageAlt: "Gold McLaren in the TunedByWali shop",
+      imageAlt: "Chrome-gold McLaren in the TunedByWali shop",
     },
     {
       id: "builds-05",
