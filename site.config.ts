@@ -34,6 +34,18 @@ export type MerchItem = {
   accent: string;
 };
 
+export type Reel = {
+  id: string;
+  url: string;
+  embed: string;
+  poster: string;
+  handle: string;
+  kicker: string;
+  title: string;
+  caption: string;
+  alt: string;
+};
+
 export const site = {
   name: "TunedByWali",
   shortName: "TBW",
@@ -213,166 +225,185 @@ export const site = {
   ] satisfies Service[],
   builds: [
     {
-      id: "shop-floor",
-      title: "The Canby shop",
+      id: "builds-01",
+      title: "Nissan GT-R Nismo",
       caption:
-        "GT-R on the lift, Evo in the center, STI on the wall, BMW strapped to the AWD dyno. This is the actual floor — Euro, JDM, and domestic in the same bay.",
-      platform: "Shop",
-      image: "/builds/shop-floor.jpeg",
+        "Black GT-R on the two-post — hood open, wheels off, work in progress. Godzilla in the Canby bay.",
+      platform: "Nissan",
+      image: "/builds/builds-01.jpg",
       imageAlt:
-        "TunedByWali shop floor with a Nissan GT-R on a lift, Mitsubishi Evo, Subaru STI, and BMW on the dyno",
+        "Black Nissan GT-R Nismo on a lift with the hood open in the TunedByWali shop",
     },
     {
-      id: "evo-mivec",
+      id: "builds-02",
       title: "MIVEC turbo — signed",
       caption:
-        "Red valve cover, AMS manifold, Spark Tech ignition, Koyorad — and the TunedByWali script on the cam cover. The extra step, in metal.",
+        "Red valve cover, AMS manifold, Spark Tech ignition — and the TunedByWali script on the cam cover.",
       platform: "Mitsubishi",
-      image: "/builds/evo-mivec-engine.jpeg",
+      image: "/builds/builds-02.jpg",
       imageAlt:
-        "Top-down view of a MIVEC turbo engine bay with a red TunedByWali valve cover",
+        "Top-down MIVEC turbo engine bay with a red TunedByWali valve cover",
     },
     {
-      id: "wrx-sti-dyno",
+      id: "builds-03",
+      title: "BMW M on the dyno",
+      caption:
+        "Dark gray M car, hood open, straps on the rollers. Baseline, pull, confirm.",
+      platform: "BMW",
+      image: "/builds/builds-03.jpg",
+      imageAlt:
+        "Dark gray BMW M strapped to the chassis dynamometer with the hood open",
+    },
+    {
+      id: "builds-04",
+      title: "Classic Ford Bronco",
+      caption:
+        "Light blue first-gen Bronco, hood off, lift and winch in the sun. Domestic builds belong here too.",
+      platform: "Domestic",
+      image: "/builds/builds-04.jpg",
+      imageAlt:
+        "Classic light blue Ford Bronco with the hood off outside the shop",
+    },
+    {
+      id: "builds-05",
+      title: "Red Subaru WRX STI",
+      caption:
+        "Hawkeye engine bay — GrimmSpeed shroud, Perrin stay, red manifold and intake. Master Technician work you can read from the cowl.",
+      platform: "Subaru",
+      image: "/builds/builds-05.jpg",
+      imageAlt:
+        "Red Subaru WRX STI engine bay with GrimmSpeed and Perrin parts",
+    },
+    {
+      id: "builds-06",
+      title: "Red Evo, open bay",
+      caption:
+        "R888Rs, Brembos, dump tube in the air. JDM work that still looks like a shop car.",
+      platform: "Mitsubishi",
+      image: "/builds/builds-06.jpg",
+      imageAlt:
+        "Bright red Mitsubishi Lancer Evolution parked in the shop with the hood open",
+    },
+    {
+      id: "builds-07",
       title: "Hawkeye STI on the rollers",
       caption:
-        "Perrin cooling plate, open hood, orange fan in the face. The wall behind it says TunedByWali for a reason.",
+        "Perrin cooling plate, open hood, orange fan in the face. The wall behind it says TunedByWali.",
       platform: "Subaru",
-      image: "/builds/wrx-sti-dyno-branded.jpeg",
+      image: "/builds/builds-07.jpg",
       imageAlt:
         "Silver Subaru WRX STI on the chassis dyno under a TunedByWali shop wall",
     },
     {
-      id: "evo-red",
-      title: "Red Evo, open bay",
-      caption:
-        "R888Rs, Brembos, dump tube in the air. JDM work that still looks like a shop car, not a magazine cover.",
-      platform: "Mitsubishi",
-      image: "/builds/evo-red-bay.jpeg",
-      imageAlt:
-        "Bright red Mitsubishi Lancer Evolution parked in the TunedByWali shop with the hood open",
-    },
-    {
-      id: "wrx-red-engine",
-      title: "Hawkeye WRX engine bay",
-      caption:
-        "Red manifold, GrimmSpeed shroud, Perrin stay, front-mount piping. Subaru Master Technician work you can read from the cowl.",
-      platform: "Subaru",
-      image: "/builds/wrx-red-engine.jpg",
-      imageAlt:
-        "Red Subaru WRX with the hood open showing a built engine bay in the shop",
-    },
-    {
-      id: "bmw-m3",
+      id: "builds-08",
       title: "F80 M3 widebody",
       caption:
-        "Rivet flares, carbon splitter, turbo hardware in the bay — then strapped to the dyno until the file and the street agree.",
+        "Rivet flares, carbon splitter, turbo hardware — then strapped to the dyno until the file and the street agree.",
       platform: "BMW",
-      image: "/builds/bmw-m3-widebody.jpeg",
-      imageAlt:
-        "Light blue BMW M3 widebody on the dyno with the hood open",
+      image: "/builds/builds-08.jpg",
+      imageAlt: "Light blue BMW M3 widebody on the dyno with the hood open",
     },
     {
-      id: "civic-type-r",
-      title: "FK8 Type R — Dynocom",
+      id: "builds-09",
+      title: "FK8 Civic Type R",
       caption:
-        "Carbon hood, dump pipes through the vent, headlights on. Honda calibration on the same rollers as the Subarus and Evos.",
+        "Carbon hood, dump pipes through the vent, headlights on. Honda calibration on the Dynocom.",
       platform: "Honda",
-      image: "/builds/civic-type-r-dyno.jpeg",
-      imageAlt:
-        "Sonic gray Honda Civic Type R on a Dynocom chassis dynamometer",
+      image: "/builds/builds-09.jpg",
+      imageAlt: "Sonic gray Honda Civic Type R on a Dynocom chassis dynamometer",
     },
     {
-      id: "evo-x-turbo",
+      id: "builds-10",
       title: "Evo X, big turbo",
       caption:
-        "Sheepey Race cooler, hood-exit pipes, bumper off. The kind of Evo that customers still talk about years later.",
+        "Sheepey Race cooler, hood-exit pipes, bumper off. The kind of Evo customers still talk about.",
       platform: "Mitsubishi",
-      image: "/builds/evo-x-turbo.jpeg",
+      image: "/builds/builds-10.jpg",
       imageAlt:
-        "Grey Mitsubishi Evo X in the shop with a large turbo and front-mount intercooler exposed",
+        "Grey Mitsubishi Evo X with a large turbo and front-mount intercooler exposed",
     },
     {
-      id: "lexus-sc",
+      id: "builds-11",
       title: "Lexus SC on the dyno",
       caption:
         "Yellow SC, laptop on the box, TunedByWali card on the dash. Old-school chassis, modern calibration.",
       platform: "Lexus",
-      image: "/builds/lexus-sc-dyno.jpeg",
+      image: "/builds/builds-11.jpg",
       imageAlt:
         "Yellow Lexus SC on the chassis dyno with a TunedByWali sign on the dashboard",
     },
     {
-      id: "toyota-86",
+      id: "builds-12",
       title: "Toyota 86",
       caption:
-        "HKS lip, red manifold, polished bar. Forced-induction 86 work that stays clean enough to leave the hood up.",
+        "HKS lip, red manifold, polished bar. Forced-induction 86 work clean enough to leave the hood up.",
       platform: "Toyota",
-      image: "/builds/toyota-86.jpeg",
-      imageAlt:
-        "Pearl white Toyota 86 in the shop with a red intake manifold visible",
+      image: "/builds/builds-12.jpg",
+      imageAlt: "Pearl white Toyota 86 in the shop with a red intake manifold",
     },
     {
-      id: "charger",
+      id: "builds-13",
       title: "Hellcat-widebody Charger",
       caption:
         "Domestic horsepower, FIC fueling, fender covers on the paint. Euro and JDM are the reputation — this is the rest of the menu.",
       platform: "Domestic",
-      image: "/builds/charger-hellcat.jpeg",
-      imageAlt:
-        "Red Dodge Charger Hellcat Widebody in the shop with the hood open",
+      image: "/builds/builds-13.jpg",
+      imageAlt: "Red Dodge Charger Hellcat Widebody in the shop with the hood open",
     },
     {
-      id: "bmw-dyno",
-      title: "BMW on the AWD dyno",
-      caption:
-        "Straps, rollers, aftermarket intake in the bay. Baseline, pull, confirm — then we drive it.",
-      platform: "BMW",
-      image: "/builds/bmw-dyno.jpeg",
-      imageAlt:
-        "Dark BMW M car strapped to the chassis dynamometer with the hood open",
-    },
-    {
-      id: "wrx-white-dyno",
+      id: "builds-14",
       title: "White STI, red COBB",
       caption:
-        "STI badge, bronze wheels, red intake on the Dynocom. Subaru files built by someone who used to assemble these engines for a living.",
+        "STI badge, bronze wheels, red intake on the Dynocom. Subaru files from someone who used to assemble these engines.",
       platform: "Subaru",
-      image: "/builds/wrx-sti-white-dyno.jpeg",
-      imageAlt:
-        "White Subaru WRX STI on the chassis dyno with a red COBB intake",
+      image: "/builds/builds-14.jpg",
+      imageAlt: "White Subaru WRX STI on the chassis dyno with a red COBB intake",
     },
     {
-      id: "audi-r8",
+      id: "builds-15",
       title: "R8 and Evo, same light",
       caption:
         "Gold R8 in the foreground, grey Evo X behind the lift. The shop is not a one-platform room.",
       platform: "Euro + JDM",
-      image: "/builds/audi-r8-shop.jpeg",
-      imageAlt:
-        "Gold chrome Audi R8 and a grey Mitsubishi Evo inside the TunedByWali shop",
+      image: "/builds/builds-15.jpg",
+      imageAlt: "Gold chrome Audi R8 and a grey Mitsubishi Evo inside the shop",
     },
     {
-      id: "bronco",
-      title: "Classic Bronco",
-      caption:
-        "Lifted, open-top, engine out in the sun. Builds here are not only JDM — if it is a car and it has a goal, it belongs on the list.",
-      platform: "Domestic",
-      image: "/builds/ford-bronco.jpeg",
-      imageAlt:
-        "Bright blue first-generation Ford Bronco with the hood off outside the shop",
-    },
-    {
-      id: "bmw-bay",
+      id: "builds-16",
       title: "Grey BMW at the door",
       caption:
-        "Blacked-out kidney, performance wheels, bay door behind it. Daily Euro cars get the same extra step as the dyno heroes.",
+        "Blacked-out kidney, performance wheels, bay door behind it. Daily Euro cars get the same extra step.",
       platform: "BMW",
-      image: "/builds/bmw-grey-bay.jpeg",
-      imageAlt:
-        "Light grey BMW sedan parked in front of the TunedByWali shop doors",
+      image: "/builds/builds-16.jpg",
+      imageAlt: "Light grey BMW sedan parked in front of the TunedByWali shop doors",
     },
   ] satisfies Build[],
+  reels: [
+    {
+      id: "dcuu0wlvwep",
+      url: "https://www.instagram.com/pshhhhevo/reel/DcuU0wLvwep/",
+      embed: "https://www.instagram.com/reel/DcuU0wLvwep/embed",
+      poster: "/ig/reel-dcuu0wlvwep.jpg",
+      handle: "pshhhhevo",
+      kicker: "Built & tuned by @tunedbywali",
+      title: "AMS 2.2 Evo — Varis widebody",
+      caption:
+        "2.2L AMS long block, Comp Turbo, Sheepey cooler, Ohlins, Varis V1. Watch the reel on Instagram.",
+      alt: "Instagram reel poster of a Varis-widebody Evo built and tuned by TunedByWali",
+    },
+    {
+      id: "dctvy3nvvtp",
+      url: "https://www.instagram.com/pshhhhevo/reel/Dctvy3nvvTP/",
+      embed: "https://www.instagram.com/reel/Dctvy3nvvTP/embed",
+      poster: "/ig/reel-dctvy3nvvtp.jpg",
+      handle: "pshhhhevo",
+      kicker: "Built & tuned by @tunedbywali",
+      title: "Same Evo — street and sound",
+      caption:
+        "Second reel from the same build. Tap through to Instagram for the full clip.",
+      alt: "Instagram reel poster of a TunedByWali Evo build in motion",
+    },
+  ] satisfies Reel[],
   testimonials: [
     {
       quote:
@@ -423,15 +454,15 @@ export const site = {
     ],
   },
   images: {
-    hero: "/builds/shop-floor.jpeg",
+    hero: "/builds/builds-01.jpg",
     heroAlt:
-      "TunedByWali shop floor in Canby with a GT-R on the lift, Evo, STI, and BMW on the AWD dyno",
-    about: "/builds/wrx-sti-dyno-branded.jpeg",
+      "Black Nissan GT-R Nismo on a lift with the hood open at TunedByWali in Canby",
+    about: "/builds/builds-07.jpg",
     aboutAlt:
       "Silver Subaru WRX STI on the dyno under the TunedByWali shop wall",
-    shop: "/builds/audi-r8-shop.jpeg",
+    shop: "/builds/builds-15.jpg",
     shopAlt: "Performance cars inside the TunedByWali shop",
-    book: "/builds/evo-mivec-engine.jpeg",
+    book: "/builds/builds-02.jpg",
     bookAlt: "MIVEC turbo engine bay with TunedByWali branding on the valve cover",
   },
 } as const;

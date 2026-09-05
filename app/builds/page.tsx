@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BuildsGallery } from "@/components/builds-gallery";
 import { CtaBanner } from "@/components/cta-banner";
+import { InstagramReels } from "@/components/instagram-reels";
 import { PageHero } from "@/components/page-hero";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function BuildsPage() {
         description="These are cars that have been tuned, modified, or serviced here — shop-floor photos, not stock stand-ins. Want yours on the wall? Email a photo of the ride."
       />
       <BuildsGallery heading={false} />
+      <InstagramReels />
       <CtaBanner />
     </main>
   );
