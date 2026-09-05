@@ -21,7 +21,7 @@ export function Logo({
     >
       <Image
         src="/tunedbywali-logo.jpg"
-        alt="TunedByWali"
+        alt="TunedByWali brush-script signature"
         width={1600}
         height={740}
         priority={size === "header"}
