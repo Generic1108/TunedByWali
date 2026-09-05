@@ -235,16 +235,6 @@ export const site = {
         "Black Nissan GT-R Nismo on a lift with the hood open in the TunedByWali shop",
     },
     {
-      id: "builds-02",
-      title: "MIVEC turbo — signed",
-      caption:
-        "Red valve cover, AMS manifold, Spark Tech ignition — and the TunedByWali script on the cam cover.",
-      platform: "Mitsubishi",
-      image: "/builds/builds-02.jpg",
-      imageAlt:
-        "Top-down MIVEC turbo engine bay with a red TunedByWali valve cover",
-    },
-    {
       id: "builds-03",
       title: "BMW M on the dyno",
       caption:
@@ -255,24 +245,33 @@ export const site = {
         "Dark gray BMW M strapped to the chassis dynamometer with the hood open",
     },
     {
-      id: "builds-04",
-      title: "Classic Ford Bronco",
+      id: "builds-15",
+      title: "McLaren — gold",
       caption:
-        "Light blue first-gen Bronco, hood off, lift and winch in the sun. Domestic builds belong here too.",
-      platform: "Domestic",
-      image: "/builds/builds-04.jpg",
-      imageAlt:
-        "Classic light blue Ford Bronco with the hood off outside the shop",
+        "Gold McLaren in the bay. The shop is not a one-platform room.",
+      platform: "McLaren",
+      image: "/builds/builds-15.jpg",
+      imageAlt: "Gold McLaren in the TunedByWali shop",
     },
     {
       id: "builds-05",
-      title: "Red Subaru WRX STI",
+      title: "Subaru WRX STI",
       caption:
         "Hawkeye engine bay — GrimmSpeed shroud, Perrin stay, red manifold and intake. Master Technician work you can read from the cowl.",
       platform: "Subaru",
       image: "/builds/builds-05.jpg",
       imageAlt:
         "Red Subaru WRX STI engine bay with GrimmSpeed and Perrin parts",
+    },
+    {
+      id: "builds-02",
+      title: "MIVEC turbo — signed",
+      caption:
+        "Red valve cover, AMS manifold, Spark Tech ignition — and the TunedByWali script on the cam cover.",
+      platform: "Mitsubishi",
+      image: "/builds/builds-02.jpg",
+      imageAlt:
+        "Top-down MIVEC turbo engine bay with a red TunedByWali valve cover",
     },
     {
       id: "builds-06",
@@ -358,15 +357,6 @@ export const site = {
       platform: "Subaru",
       image: "/builds/builds-14.jpg",
       imageAlt: "White Subaru WRX STI on the chassis dyno with a red COBB intake",
-    },
-    {
-      id: "builds-15",
-      title: "R8 and Evo, same light",
-      caption:
-        "Gold R8 in the foreground, grey Evo X behind the lift. The shop is not a one-platform room.",
-      platform: "Euro + JDM",
-      image: "/builds/builds-15.jpg",
-      imageAlt: "Gold chrome Audi R8 and a grey Mitsubishi Evo inside the shop",
     },
     {
       id: "builds-16",

@@ -42,7 +42,7 @@ export function Header() {
       >
         Skip to content
       </a>
-      <div className="mx-auto flex h-36 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 md:h-40">
+      <div className="mx-auto flex h-[7.5rem] max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Logo />
         <nav
           aria-label="Primary"

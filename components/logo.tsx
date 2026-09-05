@@ -14,9 +14,7 @@ export function Logo({
       href="/"
       className={cn(
         "group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-race",
-        size === "header"
-          ? "w-[62%] max-w-2xl min-w-0 sm:w-1/2"
-          : "inline-flex max-w-lg",
+        size === "header" ? "w-1/2 max-w-xl min-w-0" : "inline-flex max-w-md",
         className,
       )}
       aria-label="TunedByWali home"
@@ -29,8 +27,8 @@ export function Logo({
         priority={size === "header"}
         className={
           size === "header"
-            ? "h-auto w-full max-h-40 object-contain object-left"
-            : "h-28 w-auto max-h-36 object-contain object-left md:h-36"
+            ? "h-auto w-full max-h-32 object-contain object-left"
+            : "h-20 w-auto max-h-24 object-contain object-left md:h-24"
         }
       />
     </Link>

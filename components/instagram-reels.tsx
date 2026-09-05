@@ -59,14 +59,6 @@ export function InstagramReels() {
                 Watch on Instagram →
               </a>
             </div>
-            <iframe
-              title={reel.title}
-              src={reel.embed}
-              className="h-[34rem] w-full border-t border-line bg-ink"
-              loading="lazy"
-              allow="encrypted-media; autoplay; clipboard-write"
-              allowFullScreen
-            />
           </li>
         ))}
       </ul>
