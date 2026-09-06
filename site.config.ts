@@ -245,12 +245,12 @@ export const site = {
         "Dark gray BMW M strapped to the chassis dynamometer with the hood open",
     },
     {
-      id: "builds-15",
+      id: "ig-03",
       title: "McLaren in the shop",
       caption:
         "Chrome-gold McLaren in the Canby bay. The shop is not a one-platform room.",
       platform: "McLaren",
-      image: "/builds/builds-15.jpg",
+      image: "/ig/ig-03.jpg",
       imageAlt: "Chrome-gold McLaren in the TunedByWali shop",
     },
     {
@@ -450,8 +450,8 @@ export const site = {
     about: "/builds/builds-07.jpg",
     aboutAlt:
       "Silver Subaru WRX STI on the dyno under the TunedByWali shop wall",
-    shop: "/builds/builds-15.jpg",
-    shopAlt: "Performance cars inside the TunedByWali shop",
+    shop: "/ig/ig-03.jpg",
+    shopAlt: "Chrome-gold McLaren inside the TunedByWali shop",
     book: "/builds/builds-02.jpg",
     bookAlt: "MIVEC turbo engine bay with TunedByWali branding on the valve cover",
   },
